@@ -51,7 +51,7 @@ def mediana_abs(datos):
   ordenado = sorted(datos)
   n = len(ordenado)
   mediana = ordenado[n // 2] if n % 2 != 0 else (ordenado[n // 2 - 1] + ordenado[n // 2]) / 2
-  diferencias_absolutas = [abs(x - mediana) for x in lista_ordenada]
+  diferencias_absolutas = [abs(x - mediana) for x in ordenado]
   n = len(diferencias_absolutas)
   if n % 2 != 0:
     mediana_abs = sorted(diferencias_absolutas)[n // 2]
