@@ -1,8 +1,8 @@
-def promedio(datos)
+def promedio(datos):
   return sum(datos) / len(datos)
 
 
-def mediana(datos)
+def mediana(datos):
   ordenado = sorted(datos)
   n = len(ordenado)
   if n % 2 == 0:
@@ -14,7 +14,7 @@ def mediana(datos)
   return mediana
 
 
-def moda(datos)
+def moda(datos):
   categorias_unicas = set(datos)
   frecuencias = {categoria: datos.count(categoria) for categoria in categorias_unicas}
   max_frecuencia = max(frecuencias.values())
@@ -22,24 +22,24 @@ def moda(datos)
   return moda
 
 
-def rango(datos)
+def rango(datos):
   return max(datos) - min(datos)
 
 
-def varianza(datos)
+def varianza(datos):
   promedio = sum(datos) / len(datos)
   suma_cuadrados = sum((x - promedio) ** 2 for x in datos)
   return suma_cuadrados / (len(datos) - 1)
 
 
-def desviación(datos)
+def desviación(datos):
   promedio = sum(datos) / len(datos)
   suma_cuadrados = sum((x - promedio) ** 2 for x in datos)
   varianza = suma_cuadrados / (len(datos) - 1)
   return varianza ** 0.5
 
 
-def cuartiles(datos)
+def cuartiles(datos):
   ordenado = sorted(datos)
   n = len(ordenado)
   q1 = ordenado[n // 4] if n % 4 != 0 else (ordenado[n // 4 - 1] + ordenado[n // 4]) / 2
@@ -47,7 +47,7 @@ def cuartiles(datos)
   return q3 - q1
 
 
-def mediana_abs(datos)
+def mediana_abs(datos):
   ordenado = sorted(datos)
   n = len(ordenado)
   mediana = ordenado[n // 2] if n % 2 != 0 else (ordenado[n // 2 - 1] + ordenado[n // 2]) / 2
