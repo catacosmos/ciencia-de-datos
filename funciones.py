@@ -26,6 +26,16 @@ def rango(datos):
   return max(datos) - min(datos)
 
 
+def frecuencia_abs(datos):
+  frecuencia = {}
+  for elemento in datos:
+    if elemento in frecuencia:
+        frecuencia[elemento] += 1
+    else:
+        frecuencia[elemento] = 1
+  return frecuencia
+
+
 def varianza(datos):
   promedio = sum(datos) / len(datos)
   suma_cuadrados = sum((x - promedio) ** 2 for x in datos)
