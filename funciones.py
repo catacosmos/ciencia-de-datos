@@ -6,11 +6,11 @@ def mediana(datos):
   ordenado = sorted(datos)
   n = len(ordenado)
   if n % 2 == 0:
-      medio_izquierdo = ordenado[n / 2 - 1]
-      medio_derecho = ordenado[n / 2]
+      medio_izquierdo = ordenado[n // 2 - 1]
+      medio_derecho = ordenado[n // 2]
       mediana = (medio_izquierdo + medio_derecho) / 2
   else:
-      mediana = ordenado[n / 2]
+      mediana = ordenado[n // 2]
   return mediana
 
 
