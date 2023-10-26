@@ -42,14 +42,14 @@ def moda(datos):
     datos (list): Una lista de datos numéricos.
 
     Retorna:
-    list: Una lista con los modos (puede ser más de uno).
+    float: El valor modal.
     """
     data_sin_nan = [x for x in datos if x == x]
     categorias_unicas = set(data_sin_nan)
     frecuencias = {categoria: data_sin_nan.count(categoria) for categoria in categorias_unicas}
     max_frecuencia = max(frecuencias.values())
     moda = [categoria for categoria, frecuencia in frecuencias.items() if frecuencia == max_frecuencia]
-    return moda
+    return moda[0] if moda else None  # Devuelve la primera moda o None si no hay moda
 
 
 def rango(datos):
