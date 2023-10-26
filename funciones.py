@@ -1,5 +1,5 @@
 def promedio(datos):
-datos = [x for x in datos if x == x]
+  datos = [x for x in datos if x == x]
   return sum(datos) / len(datos)
 
 
