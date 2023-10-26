@@ -1,3 +1,4 @@
+import math
 def promedio(datos):
   datos = [x for x in datos if not math.isnan(x)]
   return sum(datos) / len(datos)
