@@ -55,7 +55,28 @@ def cuartiles(datos):
   q1 = ordenado[n // 4] if n % 4 != 0 else (ordenado[n // 4 - 1] + ordenado[n // 4]) / 2
   q3 = ordenado[n // 4 * 3] if n % 4 != 0 else (ordenado[n // 4 * 3 - 1] + ordenado[n // 4 * 3]) / 2
   return q3 - q1
+def percentil(datos, percentil):
+    """
+    Calcula un percentil específico de un conjunto de datos sin usar NumPy.
 
+    Parámetros:
+    datos (list): Una lista de datos numéricos.
+    percentil (int): El percentil que se desea calcular.
+
+    Retorna:
+    float: El valor del percentil especificado.
+    """
+    datos_ordenados = sorted(datos)
+    posicion = (percentil / 100) * (len(datos_ordenados) - 1)
+
+    # Si la posición es un entero, el percentil es el dato en esa posición.
+    if isinstance(posicion, int):
+        return datos_ordenados[int(posicion)]
+    else:
+        # Si la posición no es un entero, se interpola entre los datos.
+        k = int(posicion)
+        f = posicion - k
+        return (1 - f) * datos_ordenados[k] + f * datos_ordenados[k + 1]
 
 def mediana_abs(datos):
   ordenado = sorted(datos)
