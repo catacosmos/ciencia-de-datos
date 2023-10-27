@@ -180,7 +180,7 @@ def mediana_abs(datos):
     if n % 2 != 0:
       mediana_abs = sorted(diferencias_absolutas)[n // 2]
     else:
-      median_abs = (sorted(diferencias_absolutas)[n // 2 - 1] + sorted(diferencias_absolutas)[n // 2]) / 2
+      mediana_abs = (sorted(diferencias_absolutas)[n // 2 - 1] + sorted(diferencias_absolutas)[n // 2]) / 2
     return mediana_abs
 
 
